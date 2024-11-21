@@ -1,0 +1,577 @@
+/* Estilos Generales */
+body {
+    font-family: 'Spartan', sans-serif;
+    background-color: #1c1c1c;
+    background-image: url('/assets/images/Banner1.png');
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 113px;
+}
+
+/* Encabezado */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #1c1c1c;
+    background-image: url('/assets/images/Background.png');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #333;
+}
+
+/* Estilo del logo */
+.logo {
+    font-size: 1.8em;
+    position: relative;
+    font-weight: bold;
+}
+
+.logo-gloss {
+    font-family: 'Manrope', sans-serif;
+    color: #ffffff;
+    position: relative;
+}
+
+.logo-and {
+    font-family: 'Manrope', sans-serif;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.logo-glam {
+    font-family: 'Manrope', sans-serif;
+    color: #CEA561;
+    position: relative;
+}
+
+/* Enlaces y botones del encabezado */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #CEA561;
+}
+
+.sign-up {
+    font-family: 'Spartan', sans-serif;
+    background-color: #CEA561;
+    color: #1c1c1c;
+    padding: 0.7em 1.5em;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.sign-up a {
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+/* Iconos del carrito y búsqueda */
+.header-icons {
+    display: flex;
+    gap: 1em;
+}
+
+.header-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+/* Sección Hero */
+.hero-section {
+    height: 300px;
+    background-image: url('/assets/images/Banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #292929;
+    position: relative;
+}
+
+.hero-section::before,
+.hero-section::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.hero-section::before {
+    top: 0;
+    background: linear-gradient(to bottom, #1c1c1c, transparent);
+}
+
+.hero-section::after {
+    bottom: 0;
+    background: linear-gradient(to top, #1c1c1c, transparent);
+}
+
+/* Sección de Servicios */
+.services-section {
+    padding: 2em;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: #fff;
+    position: relative;
+}
+
+.services-section h2 {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.services-section p {
+    color: #aaa;
+    font-size: 1em;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+/* Slider de tarjetas en Servicios */
+.service-cards-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    padding: 1em;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    flex: 0 0 250px;
+    padding: 1.5em;
+    background-color: #2b2b2b;
+    border: 1px solid #CEA561;
+    text-align: center;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Centrando contenido */
+.service-card img {
+    margin-bottom: 1em;
+}
+
+.service-card h3 {
+    margin: 0;
+    font-size: 120%;
+    color: #fff;
+}
+
+/* Botón desplegable para Servicios */
+.services-button {
+    background: none;
+    color: #fff;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+}
+
+.services-button:hover {
+    color: #CEA561;
+}
+
+.services-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1c1c1c;
+    min-width: 160px;
+    box-shadow: none;
+    z-index: 1;
+    border: 1px solid #333;
+}
+
+.services-dropdown-content a {
+    color: #CEA561;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.services-dropdown:hover .services-dropdown-content {
+    display: block;
+}
+
+/* Sección de Paquetes */
+.packages-section {
+    padding: 2em;
+    text-align: center;
+}
+
+.package-section::before,
+.package-section::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.package-section::before {
+    top: 0;
+    background: linear-gradient(to bottom, #1c1c1c, transparent);
+}
+
+.package-section::after {
+    bottom: 0;
+    background: linear-gradient(to top, #1c1c1c, transparent);
+}
+
+.package-cards {
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+}
+
+.package-card {
+    position: relative;
+    border: 1px solid #CEA561;
+    padding: 1.5em;
+    text-align: center;
+    border-radius: 15px;
+    width: 250px;
+    background-color: #2b2b2b;
+    min-height: 400px;
+    /* Altura fija para acomodar el botón */
+}
+
+.package-card .price {
+    font-size: 1.5em;
+    color: #CEA561;
+    margin: 0.5em 0;
+}
+
+.package-card .choose-plan {
+    background-color: #CEA561;
+    color: #1c1c1c;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.package-card ul {
+    text-align: center;
+    margin: 10px -30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Sección de Citas */
+.appointment-section {
+    text-align: center;
+    padding: 2em;
+}
+
+/*calendario*/
+
+.calendar-container {
+    background-color: #292929;
+    padding: 2em;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#calendar {
+    border: 2px solid #CEA561;
+    padding: 1.5em;
+    background-color: #1c1c1c;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #CEA561;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: #CEA561;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.calendar-header button:hover {
+    color: #fff;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #CEA561;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.calendar-day:hover:not(.disabled) {
+    border-color: #CEA561;
+    color: #CEA561;
+    transform: scale(1.05);
+}
+
+.calendar-day.selected {
+    background-color: #CEA561;
+    color: #1c1c1c;
+}
+
+.calendar-day.disabled {
+    color: #555;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.time-slots {
+    display: none;
+}
+
+.time-slots.visible {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em 0;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.time-slot {
+    background-color: #1c1c1c;
+    color: #CEA561;
+    border: 1px solid #CEA561;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.appointment-form input,
+.appointment-form select {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.7em;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Botón de cita */
+.book-appointment {
+    background-color: #CEA561;
+    color: #1c1c1c;
+    padding: 0.7em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Sección de Suscripción */
+.subscribe-section {
+    text-align: center;
+    padding: 2em;
+    background-color: #333;
+}
+
+.subscribe-section h2 {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.subscribe-section p {
+    color: #aaa;
+    font-size: 1em;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.subscribe-form input {
+    background-color: #333;
+    color: #fff;
+    border: color(rgb(255, 255, 255));
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.subscribe-button {
+    background-color: #CEA561;
+    color: #1c1c1c;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Pie de Página */
+.footer {
+    background-color: #1c1c1c;
+    color: #aaa;
+    padding: 2em 1em;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.footer-column {
+    width: 200px;
+}
+
+.footer-column h3 img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.footer-column p {
+    margin: 0.3em 0;
+    color: #aaa;
+}
+
+.social-icons a img {
+    width: 20px;
+    margin-right: 0.5em;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #aaa;
+    margin-top: 2em;
+    font-size: 0.9em;
+}
+
+.footer-separator {
+    height: 1px;
+    background-color: #fff;
+    margin: 2em 0;
+}
+
+/* Botón de scroll hacia arriba */
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #CEA561;
+    color: #1c1c1c;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#scroll-top.visible {
+    opacity: 1;
+}
+
+#scroll-top:hover {
+    background-color: #d4b06c;
+}
+
+#scroll-top svg {
+    width: 24px;
+    height: 24px;
+}
